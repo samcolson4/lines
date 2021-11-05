@@ -1,0 +1,42 @@
+#!/bin/bash
+
+set -euo pipefail
+
+# A script to create a new task folder, with a task.yml and task.sh file, for use in a Concourse pipeline.
+
+# To use:
+# Copy newConTask to a directory in your $PATH
+# run chmod +x newConTask
+
+TASK_NAME=$1
+
+if [ -z $TASK_NAME ]; then echo "Please pass in a task name variable e.g. 'newContask myTask'"; fi
+if [ -z $TASK_NAME ]; then exit 0; fi
+
+mkdir $TASK_NAME
+cd $TASK_NAME
+
+# Put default information into shell file.
+touch "$TASK_NAME.sh"
+echo "#!/bin/bash" >> "$TASK_NAME.sh"
+echo "set -euo pipefail" >> "$TASK_NAME.sh"
+
+chmod +x "$TASK_NAME.sh"
+
+# Put default information into yaml file.
+touch "$TASK_NAME.yaml"
+echo "---
+platform: linux
+image_resource:
+  type: <name>
+  source:
+    repository: <uri>
+    tag: <version_number>" \
+>> "$TASK_NAME.yaml"
+
+echo "run:
+  path: <repo_name>/ci/tasks/$TASK_NAME.sh" \
+>> "$TASK_NAME.yaml"
+
+echo "Created $TASK_NAME folder and files."
+echo "Please update the path for the shell script to be relative to where it is run from e.g. <repo_name>/ci/tasks/$TASK_NAME.sh"
