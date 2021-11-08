@@ -29,6 +29,7 @@ echo "set -euo pipefail" >> "$TASK_NAME.sh"
 chmod +x "$TASK_NAME.sh"
 
 # Put default information into yaml file.
+# N.B - not all information will be needed for each task.
 touch "$TASK_NAME.yaml"
 echo "---
 platform: linux
