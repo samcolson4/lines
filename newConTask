@@ -4,10 +4,12 @@ set -euo pipefail
 
 # A script to create a new task folder, with a task.yml and task.sh file, for use in a Concourse pipeline.
 
-#
-# newConTask <task_name>
-# e.g newConTask foo -> Creates a directory, 'foo', a yaml and a shell script.
-#
+# USAGE
+# $ newConTask <task_name>
+
+# EXAMPLE
+# $ newConTask foo
+# Creates a directory, 'foo', a yaml and a shell script.
 
 # To use:
 # Copy newConTask to a directory in your $PATH
