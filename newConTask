@@ -33,17 +33,19 @@ chmod +x "$TASK_NAME.sh"
 # Put default information into yaml file.
 # N.B - not all information will be needed for each task.
 touch "$TASK_NAME.yaml"
-echo "---
-platform: linux
-image_resource:
-  type: <name>
-  source:
-    repository: <uri>
-    tag: <version_number>" \
+echo \
+  "---
+  platform: linux
+  image_resource:
+    type: <name>
+    source:
+      repository: <uri>
+      tag: <version_number>" \
 >> "$TASK_NAME.yaml"
 
-echo "run:
-  path: <repo_name>/ci/tasks/$TASK_NAME.sh" \
+echo \
+  "run:
+    path: <repo_name>/ci/tasks/$TASK_NAME.sh" \
 >> "$TASK_NAME.yaml"
 
 echo "Created $TASK_NAME folder and files."
