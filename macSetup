@@ -1,0 +1,33 @@
+#!/bin/bash
+
+set -euo pipefail
+
+# Install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install starship
+brew install starship
+echo \
+    'eval "$(starship init zsh)"' \
+>> ~/.zshrc
+
+# Install iTerm2
+brew install --cask iterm2
+
+# Install Slack
+brew install --cask slack
+
+# Install Chrome
+brew install --cask google-chrome
+
+# Install MonitorControl
+brew install --cask monitorcontrol
+
+# Install Zoom
+brew install --cask zoom
+
+# Install Docker
+brew install --cask docker
+
+# Install kubectl
+brew install kubectl
