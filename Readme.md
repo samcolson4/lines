@@ -1,7 +1,5 @@
 # A collection of scripts
-N.B - not everything will be up to date at all times.
-
-Each script should be made executable before running:
+Scripts may need to be made executable before running:
 
 ```
 chmod +x <script_name>
@@ -13,7 +11,7 @@ In some instances, it is useful to put the script in your path:
 cp <script_name> <$YOUR_PATH>
 ```
 
-It can then be called directly, without reference to the scripts location.
+It can then be called directly, without reference to the script's location.
 
 ---
 
