@@ -24,15 +24,15 @@ mkdir $TASK_NAME
 cd $TASK_NAME
 
 # Put default information into shell file.
-touch "$TASK_NAME.sh"
-echo "#!/bin/bash" >> "$TASK_NAME.sh"
-echo "set -euo pipefail" >> "$TASK_NAME.sh"
+touch "task.sh"
+echo "#!/bin/bash" >> "task.sh"
+echo "set -euo pipefail" >> "task.sh"
 
-chmod +x "$TASK_NAME.sh"
+chmod +x "task.sh"
 
 # Put default information into yaml file.
 # N.B - not all information will be needed for each task.
-touch "$TASK_NAME.yaml"
+touch "task.yaml"
 echo \
   "---
   platform: linux
@@ -41,12 +41,12 @@ echo \
     source:
       repository: <uri>
       tag: <version_number>" \
->> "$TASK_NAME.yaml"
+>> "task.yaml"
 
 echo \
   "run:
-    path: <repo_name>/ci/tasks/$TASK_NAME.sh" \
->> "$TASK_NAME.yaml"
+    path: <repo_name>/ci/tasks/$TASK_NAME/task.sh" \
+>> "task.yaml"
 
 echo "Created $TASK_NAME folder and files."
-echo "Please update the path for the shell script to be relative to where it is run from e.g. <repo_name>/ci/tasks/$TASK_NAME.sh"
+echo "Please update the path for the shell script to be relative to where it is run from e.g. <repo_name>/ci/tasks/$TASK_NAME/task.sh"
