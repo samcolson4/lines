@@ -2,5 +2,4 @@
 
 set -euo pipefail
 
-cat ~/bin/command.txt | pbcopy
-
+cp ./* ~/bin/
