@@ -1,2 +1,8 @@
 alias k=kubectl
+alias ka='kubectl apply -f'
+alias kc='kubectl create -f'
+alias kr='kubectl run'
+alias kg='kubectl get'
+alias kd='kubectl describe'
+alias ke='kubectl explain'
 alias cl=clear
