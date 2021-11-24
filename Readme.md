@@ -24,3 +24,6 @@ Builds a new [Concourse](https://github.com/concourse/concourse) task yaml & she
 A useful script to set up a new mac. Homebrew does the work for you in terms of getting an Apple Silicon version of an app where it is available (tested on an M1 Pro, late 2021).
 
 I will continue adding to this list over time.
+
+## kalias
+Copies commonly used ```kubectl``` shortcuts to your clipboard as aliases that can then be set. Born of out necessity for the KodeKloud CKA labs, which all require you to either write out ```kubectl <do x>``` everything time, or write out aliases every time. Also useful for the CKA exam.
