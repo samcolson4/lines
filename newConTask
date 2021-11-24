@@ -34,13 +34,13 @@ chmod +x "task.sh"
 # N.B - not all information will be needed for each task.
 touch "task.yaml"
 echo \
-  "---
-  platform: linux
-  image_resource:
-    type: <name>
-    source:
-      repository: <uri>
-      tag: <version_number>" \
+"---
+platform: linux
+image_resource:
+  type: <name>
+  source:
+    repository: <uri>
+    tag: <version_number>" \
 >> "task.yaml"
 
 echo \
