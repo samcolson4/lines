@@ -9,4 +9,7 @@ echo "alias k=kubectl
     alias kg='kubectl get'
     alias kd='kubectl describe'
     alias ke='kubectl explain'
-    alias cl=clear" > pbcopy
+    alias cl=clear" \
+    | pbcopy
+
+echo "Copied commands."
