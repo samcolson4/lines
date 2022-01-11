@@ -2,9 +2,6 @@
 
 set -euo pipefail
 
-# homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew//HEAD/.sh)"
-
 apps=(
     iterm2
     slack
