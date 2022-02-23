@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -euo pipefail
+
+TEAM=buildpacks
+URL=$1
+
+echo "Intercepting $URL"
+
+fly -t $TEAM intercept -u $URL

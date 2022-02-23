@@ -25,3 +25,6 @@ I will continue adding to this list over time.
 
 ## kalias
 Copies commonly used ```kubectl``` shortcuts to your clipboard as aliases that can then be set. Born of out necessity for the KodeKloud CKA labs, which all require you to either write out ```kubectl <do x>``` every time, or write out aliases every time. Also useful for the CKA exam.
+
+## qi
+Quickly intercept a Concourse container, without needing to type out the whole command.
