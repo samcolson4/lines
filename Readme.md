@@ -28,3 +28,6 @@ Copies commonly used ```kubectl``` shortcuts to your clipboard as aliases that c
 
 ## qi
 Quickly intercept a Concourse container, without needing to type out the whole command.
+
+## cumulativeTime
+Calculates the cumulative time taken for each step of a *thing* (e.g. pipeline run) when provided with a list of times in a specific format. See `example-input/times.txt` for formatting help.
