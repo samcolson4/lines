@@ -33,8 +33,5 @@ do
   echo ""
 done
 
-total_minutes=$(expr $CTS / 60)
-total_hours=$(expr $total_minutes / 60)
-
 echo "Total seconds taken: $CTS"
 printf 'Total time taken: %dh:%dm:%ds\n' $(($CTS/3600)) $(($CTS%3600/60)) $(($CTS%60))
